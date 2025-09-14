@@ -1,1072 +1,1388 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Khawja Imran Masud - Portfolio</title>
     <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <!-- Include Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-        }
+      :root {
+        --primary-color: #2c3e50;
+        --secondary-color: #3498db;
+        --accent-color: #e74c3c;
+        --light-color: #ecf0f1;
+        --dark-color: #2c3e50;
+      }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
+      body {
+        font-family: "Poppins", sans-serif;
+        color: #333;
+        line-height: 1.6;
+      }
 
-        .navbar {
-            background-color: var(--primary-color);
-            padding: 15px 0;
-        }
+      .navbar {
+        background-color: var(--primary-color);
+        padding: 15px 0;
+      }
 
-        .navbar-brand,
-        .nav-link {
-            font-weight: 500;
-        }
+      .navbar-brand,
+      .nav-link {
+        font-weight: 500;
+      }
 
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: white;
-            padding: 100px 0;
-            text-align: center;
-        }
+      .hero-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: white;
+        padding: 100px 0;
+        text-align: center;
+      }
 
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            margin-bottom: 20px;
-        }
+      .profile-img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid rgba(255, 255, 255, 0.3);
+        margin-bottom: 20px;
+      }
 
-        .section-title {
-            position: relative;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            font-weight: 700;
-        }
+      .section-title {
+        position: relative;
+        margin-bottom: 30px;
+        padding-bottom: 15px;
+        font-weight: 700;
+      }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50px;
+        height: 3px;
+        background-color: var(--secondary-color);
+      }
 
-        .card {
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            margin-bottom: 20px;
-        }
+      .card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        margin-bottom: 20px;
+      }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+      .card:hover {
+        transform: translateY(-5px);
+      }
 
-        .social-icon {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
-            text-align: center;
-            background-color: var(--primary-color);
-            color: white;
-            border-radius: 50%;
-            margin-right: 10px;
-            transition: all 0.3s ease;
-        }
+      .social-icon {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        margin-right: 10px;
+        transition: all 0.3s ease;
+      }
 
-        .social-icon:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-        }
+      .social-icon:hover {
+        background-color: var(--secondary-color);
+        transform: translateY(-3px);
+      }
 
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 30px 0;
-        }
-        .sub-menu-r {
-            top: 40%;
-            right: 0;
-        }
+      footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 30px 0;
+      }
+      .sub-menu-r {
+        top: 40%;
+        right: 0;
+      }
 
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            background-color: var(--secondary-color);
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 50px;
-            font-size: 20px;
-            display: none;
-            z-index: 1000;
-        }
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--secondary-color);
+        color: white;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 50px;
+        font-size: 20px;
+        display: none;
+        z-index: 1000;
+      }
 
+      .research-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+      }
 
-        .research-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: none;
-            border-radius: 10px;
-            overflow: hidden;
-        }
+      .research-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
 
-        .research-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        }
+      .research-card .card-header {
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      }
 
-        .research-card .card-header {
-            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-        }
+      .research-info p {
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+      }
 
-        .research-info p {
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-        }
-
-        .research-desc {
-            font-style: italic;
-            color: #6c757d;
-            border-top: 1px dashed #dee2e6;
-            padding-top: 0.8rem;
-            margin-top: 0.8rem;
-            font-size: 0.9rem;
-        }
+      .research-desc {
+        font-style: italic;
+        color: #6c757d;
+        border-top: 1px dashed #dee2e6;
+        padding-top: 0.8rem;
+        margin-top: 0.8rem;
+        font-size: 0.9rem;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">Khawja Imran Masud</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education & Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#publications">Publications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <a class="navbar-brand" href="#">Khawja Imran Masud</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education & Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#publications">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container">
-            <img src="assets/img/person1.jpg" alt="Khawja Imran Masud" class="profile-img">
-            <h1>Khawja Imran Masud</h1>
-            <p class="lead">Graduate Research and Teaching Assistant </p>
-            <p>Department of Data Science</p>
-            <p>University of North Texas</p>
-        </div>
+      <div class="container">
+        <img
+          src="assets/img/person1.jpg"
+          alt="Khawja Imran Masud"
+          class="profile-img"
+        />
+        <h1>Khawja Imran Masud</h1>
+        <p class="lead">Graduate Research and Teaching Assistant</p>
+        <p>Department of Data Science</p>
+        <p>University of North Texas</p>
+      </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="py-5">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="row">
-                <div class="col-lg-8">
-                    <p>Khawja Imran Masud is a PhD student in Information Science (with a major in Data Science) at the
-                        University of North Texas, where he serves as a Graduate Teaching Assistant at the Data Science
-                        Department in the Interdisciplinary Data Driven Decision (D3) Lab. His current research focuses
-                        on applying deep learning-based causal inference techniques for spatio-temporal data and earth
-                        informatics. He is currently on study leave from his role as Assistant Professor of the
-                        Department of Computer Science and Engineering at Dhaka University of Engineering & Technology
-                        (DUET), Gazipur, Bangladesh. Earlier he was a lecturer in the Department of CSE at Uttara
-                        University. He received his B.Sc. Engineering and M.Sc. Engineering degrees in Computer Science
-                        and Engineering from DUET. He received the Prime Minister Gold Medal 2018 and the University
-                        Gold Medal 2018 for securing the first-class first position overall at DUET in the class of
-                        2018. He also received the UGC merit award and the Dean's Award for his academic excellence. He
-                        actively participated in various co-curricular activities and took leadership roles in
-                        organizing numerous events. His goal is to be a paramount researcher in his field, and he looks
-                        forward to exploiting his abilities and potential for the betterment of the world.
-                    <h4 class="mt-4">Research Interests</h4>
-                    <ul>
-                        <li>Machine Learning</li>
-                        <li>Deep Learning</li>
-                        <li>Computer Vision</li>
-                        <li>Natural Language Processing</li>
-                        <li>IoT</li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card p-3">
-                        <h4>Personal Info</h4>
-                        <p><strong>Email:</strong> KhawjaImranMasud@my.unt.edu <br> kimasud.cse@duet.ac.bd</p>
-                        <p><strong>Phone:</strong> +1(940) 977-9356</p>
-                        <p><strong>Office:</strong> Discovery Park, UNT</p>
-                        <p><strong>Address:</strong> 2505 Louise Street, Denton, Texas, USA.</p>
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row">
+          <div class="col-lg-8">
+            <p class="text-justify">
+              Khawja Imran Masud is a PhD student in Information Science (with a
+              major in Data Science) at the University of North Texas, where he
+              serves as a Graduate Teaching Assistant at the Data Science
+              Department in the Interdisciplinary Data Driven Decision (D3) Lab.
+              His current research focuses on applying deep learning-based
+              causal inference techniques for spatio-temporal data and earth
+              informatics. He is currently on study leave from his role as
+              Assistant Professor of the Department of Computer Science and
+              Engineering at Dhaka University of Engineering & Technology
+              (DUET), Gazipur, Bangladesh. Earlier he was a lecturer in the
+              Department of CSE at Uttara University. He received his B.Sc.
+              Engineering and M.Sc. Engineering degrees in Computer Science and
+              Engineering from DUET. He received the Prime Minister Gold Medal
+              2018 and the University Gold Medal 2018 for securing the
+              first-class first position overall at DUET in the class of 2018.
+              He also received the UGC merit award and the Dean's Award for his
+              academic excellence. He actively participated in various
+              co-curricular activities and took leadership roles in organizing
+              numerous events. His goal is to be a paramount researcher in his
+              field, and he looks forward to exploiting his abilities and
+              potential for the betterment of the world.
+            </p>
 
-                        <hr>
-                        <p><strong>Field of interest:</strong> Deep Learning, Earth Informatics, Cyber Physical Systems
-                        </p>
-                        <p><strong>Field of specialization:</strong> Deep learning-based causal inference techniques for
-                            spatio-temporal data and earth informatics, Machine Learning-based Cyber Physical
-                            Systems/IoT, Data Science in Intelligent Systems</p>
+            <h4 class="mt-4">Research Interests</h4>
+            <ul>
+              <li>Machine Learning</li>
+              <li>Deep Learning</li>
+              <li>Computer Vision</li>
+              <li>Natural Language Processing</li>
+              <li>IoT</li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <div class="card p-3">
+              <h4>Personal Info</h4>
+              <p>
+                <strong>Email:</strong> KhawjaImranMasud@my.unt.edu <br />
+                kimasud.cse@duet.ac.bd
+              </p>
+              <p><strong>Phone:</strong> +1(940) 977-9356</p>
+              <p><strong>Office:</strong> Discovery Park, UNT</p>
+              <p>
+                <strong>Address:</strong> 2505 Louise Street, Denton, Texas,
+                USA.
+              </p>
 
-                    </div>
-                </div>
+              <hr />
+              <p>
+                <strong>Field of interest:</strong> Deep Learning, Earth
+                Informatics, Cyber Physical Systems
+              </p>
+              <p>
+                <strong>Field of specialization:</strong> Deep learning-based
+                causal inference techniques for spatio-temporal data and earth
+                informatics, Machine Learning-based Cyber Physical Systems/IoT,
+                Data Science in Intelligent Systems
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Education Section -->
     <section id="education" class="py-5 bg-light">
-        <div class="container">
-
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h2 class="section-title">Education</h2>
             <div class="row">
-                <div class="col-md-6">
-                    <h2 class="section-title">Education</h2>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="card p-4">
-                                <h4>M.Sc. in Computer Science</h4>
-                                <p class="text-muted">University of Engineering and Technology, Country</p>
-                                <p>2023</p>
-                            </div>
-                        </div>
-                        <div class="col-md-12">
-                            <div class="card p-4">
-                                <h4>B.Sc. in Computer Science and Engineering</h4>
-                                <p class="text-muted">Dhaka University of Engineering & Technology, Bangladesh</p>
-                                <p>2009 - 2013</p>
-                            </div>
-                        </div>
-                        <div class="col-md-12 mt-4">
-                            <div class="card p-4">
-                                <h4>Diploma in Data Telecommunication and Networking</h4>
-                                <p class="text-muted">Feni Computer Institute</p>
-                                <p>2012</p>
-                            </div>
-                        </div>
-                    </div>
+              <div class="col-md-12">
+                <div class="card p-4">
+                  <h4>M.Sc. in Computer Science</h4>
+                  <p class="text-muted">
+                    University of Engineering and Technology, Country
+                  </p>
+                  <p>2023</p>
                 </div>
-                <div class="col-md-6">
-                    <h2 class="section-title">Professional Experience</h2>
-                    <div class="timeline">
-                        <div class="card p-4 mb-4">
-                            <h4>Assistant Professor</h4>
-                            <p class="text-muted">Department of CSE, DUET, Gazipur</p>
-                            <p>2022-05-29 : Continue</p>
-                            <ul>
-                                <li>Teaching undergraduate and graduate courses in Computer Science</li>
-                                <li>Supervising student research projects and theses</li>
-                                <li>Conducting research in Machine Learning and AI</li>
-                            </ul>
-                        </div>
-                        <div class="card p-4 mb-4">
-                            <h4>Lecturer</h4>
-                            <p class="text-muted">Department of CSE, DUET, Gazipur</p>
-                            <p>2018-12-23 : 2022-05-29</p>
-                            <ul>
-                                <li>Taught core Computer Science courses</li>
-                                <li>Published research papers in international conferences</li>
-                                <li>Advised student projects and clubs</li>
-                            </ul>
-                        </div>
-                        <div class="card p-4 mb-4">
-                            <h4>Lecturer</h4>
-                            <p class="text-muted">Department of CSE, Uttara University</p>
-                            <p>2018-09-26 : 2018-12-22</p>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-md-12">
+                <div class="card p-4">
+                  <h4>B.Sc. in Computer Science and Engineering</h4>
+                  <p class="text-muted">
+                    Dhaka University of Engineering & Technology, Bangladesh
+                  </p>
+                  <p>2009 - 2013</p>
                 </div>
+              </div>
+              <div class="col-md-12 mt-4">
+                <div class="card p-4">
+                  <h4>Diploma in Data Telecommunication and Networking</h4>
+                  <p class="text-muted">Feni Computer Institute</p>
+                  <p>2012</p>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+              <div class="card p-4 mb-4">
+                <h4>Assistant Professor</h4>
+                <p class="text-muted">Department of CSE, DUET, Gazipur</p>
+                <p>2022-05-29 : Continue</p>
+                <ul>
+                  <li>
+                    Teaching undergraduate and graduate courses in Computer
+                    Science
+                  </li>
+                  <li>Supervising student research projects and theses</li>
+                  <li>Conducting research in Machine Learning and AI</li>
+                </ul>
+              </div>
+              <div class="card p-4 mb-4">
+                <h4>Lecturer</h4>
+                <p class="text-muted">Department of CSE, DUET, Gazipur</p>
+                <p>2018-12-23 : 2022-05-29</p>
+                <ul>
+                  <li>Taught core Computer Science courses</li>
+                  <li>
+                    Published research papers in international conferences
+                  </li>
+                  <li>Advised student projects and clubs</li>
+                </ul>
+              </div>
+              <div class="card p-4 mb-4">
+                <h4>Lecturer</h4>
+                <p class="text-muted">Department of CSE, Uttara University</p>
+                <p>2018-09-26 : 2018-12-22</p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Other Experience Section -->
     <section id="experience-other" class="pb-5">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h2 class="section-title">Other Related Experience</h2>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Designation</th>
-                                    <th>Institute</th>
-                                    <th>Duration</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Adjunct Faculty</td>
-                                    <td>Bangladesh Open University</td>
-                                    <td>2018-12-23 : Continue</td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>CCNA Instructor</td>
-                                    <td>Cisco Networking Academy, DUET, Gazipur, Bangladesh</td>
-                                    <td>2021-01-01 : Continue</td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>Part-Time Faculty</td>
-                                    <td>Uttara University</td>
-                                    <td>2018-12-23 : 2022-12-23</td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>Course Coordinator (UGP)</td>
-                                    <td>Department of CSE, DUET</td>
-                                    <td>2022-09-01 : 2023-09-17</td>
-                                </tr>
-                                <tr>
-                                    <td>5</td>
-                                    <td>Moderator, DUET CS</td>
-                                    <td>Department of CSE, DUET</td>
-                                    <td>2022-06-01 : Continue</td>
-                                </tr>
-                                <tr>
-                                    <td>6</td>
-                                    <td>Internship</td>
-                                    <td>Bangladesh Research and Education Network (BdREN)</td>
-                                    <td>2017-04-23 : 2017-05-11</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="col">
-                    <h2 class="section-title">Additional Charges</h2>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th>#</th>
-                                    <th>Designation</th>
-                                    <th>Office</th>
-                                    <th>Duration</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Assistant Provost</td>
-                                    <td>STA Hall</td>
-                                    <td>2024-10-24 : Continue</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 class="section-title">Other Related Experience</h2>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead class="table-dark">
+                  <tr>
+                    <th>#</th>
+                    <th>Designation</th>
+                    <th>Institute</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Adjunct Faculty</td>
+                    <td>Bangladesh Open University</td>
+                    <td>2018-12-23 : Continue</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>CCNA Instructor</td>
+                    <td>Cisco Networking Academy, DUET, Gazipur, Bangladesh</td>
+                    <td>2021-01-01 : Continue</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Part-Time Faculty</td>
+                    <td>Uttara University</td>
+                    <td>2018-12-23 : 2022-12-23</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Course Coordinator (UGP)</td>
+                    <td>Department of CSE, DUET</td>
+                    <td>2022-09-01 : 2023-09-17</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Moderator, DUET CS</td>
+                    <td>Department of CSE, DUET</td>
+                    <td>2022-06-01 : Continue</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Internship</td>
+                    <td>Bangladesh Research and Education Network (BdREN)</td>
+                    <td>2017-04-23 : 2017-05-11</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
+          </div>
+          <div class="col">
+            <h2 class="section-title">Additional Charges</h2>
+            <div class="table-responsive">
+              <table class="table table-hover">
+                <thead class="table-dark">
+                  <tr>
+                    <th>#</th>
+                    <th>Designation</th>
+                    <th>Office</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Assistant Provost</td>
+                    <td>STA Hall</td>
+                    <td>2024-10-24 : Continue</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Consultancy and Research Section -->
     <section id="research" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Consultancy and Sponsored Research Activities</h2>
+      <div class="container">
+        <h2 class="section-title">
+          Consultancy and Sponsored Research Activities
+        </h2>
 
-            <div class="row">
-                <!-- Research Card 1 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 research-card">
-                        <div class="card-header bg-secondary text-white">
-                            <h5 class="mb-0">Fuzzy Logic and IoT-based Solar Powered System</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="research-info">
-                                <p class="research-org"><strong>Organization:</strong> DUET, Gazipur (UGC Funded)</p>
-                                <p class="research-role"><strong>Role:</strong> Associate Project Director</p>
-                                <p class="research-fund"><strong>Fund:</strong> BDT 2,98,870 (USD 2,500)</p>
-                                <p class="research-year"><strong>Year:</strong> 2024-2025</p>
-                            </div>
-                            <p class="research-desc">Sustainable Monitoring and Controlling System for Local Fish
-                                Farming</p>
-                        </div>
-                    </div>
+        <div class="row">
+          <!-- Research Card 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 research-card">
+              <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">
+                  Fuzzy Logic and IoT-based Solar Powered System
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="research-info">
+                  <p class="research-org">
+                    <strong>Organization:</strong> DUET, Gazipur (UGC Funded)
+                  </p>
+                  <p class="research-role">
+                    <strong>Role:</strong> Associate Project Director
+                  </p>
+                  <p class="research-fund">
+                    <strong>Fund:</strong> BDT 2,98,870 (USD 2,500)
+                  </p>
+                  <p class="research-year"><strong>Year:</strong> 2024-2025</p>
                 </div>
-
-                <!-- Research Card 2 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 research-card">
-                        <div class="card-header bg-secondary text-white">
-                            <h5 class="mb-0">IoT-Based Crop and Poultry Integrated Aquaponics System</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="research-info">
-                                <p class="research-org"><strong>Organization:</strong> DUET, Gazipur (UGC Funded)</p>
-                                <p class="research-role"><strong>Role:</strong> Associate Project Director</p>
-                                <p class="research-fund"><strong>Fund:</strong> BDT 3,00,000 (USD 2,500)</p>
-                                <p class="research-year"><strong>Year:</strong> 2023-2024</p>
-                            </div>
-                            <p class="research-desc">Design and Implementation: Smart Bangladesh Perspective</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Research Card 3 -->
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="card h-100 research-card">
-                        <div class="card-header bg-secondary text-white">
-                            <h5 class="mb-0">IoT-based Efficient Egg Incubation System</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="research-info">
-                                <p class="research-org"><strong>Organization:</strong> University Grants Commission of
-                                    Bangladesh</p>
-                                <p class="research-role"><strong>Role:</strong> Associate Project Director</p>
-                                <p class="research-fund"><strong>Fund:</strong> BDT 3,00,000 (USD 2,500)</p>
-                                <p class="research-year"><strong>Year:</strong> 2021-2022</p>
-                            </div>
-                            <p class="research-desc">An IoT-based Efficient Egg Incubation System: Bangladesh
-                                Perspective</p>
-                        </div>
-                    </div>
-                </div>
+                <p class="research-desc">
+                  Sustainable Monitoring and Controlling System for Local Fish
+                  Farming
+                </p>
+              </div>
             </div>
-        </div>
-    </section>
+          </div>
 
+          <!-- Research Card 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 research-card">
+              <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">
+                  IoT-Based Crop and Poultry Integrated Aquaponics System
+                </h5>
+              </div>
+              <div class="card-body">
+                <div class="research-info">
+                  <p class="research-org">
+                    <strong>Organization:</strong> DUET, Gazipur (UGC Funded)
+                  </p>
+                  <p class="research-role">
+                    <strong>Role:</strong> Associate Project Director
+                  </p>
+                  <p class="research-fund">
+                    <strong>Fund:</strong> BDT 3,00,000 (USD 2,500)
+                  </p>
+                  <p class="research-year"><strong>Year:</strong> 2023-2024</p>
+                </div>
+                <p class="research-desc">
+                  Design and Implementation: Smart Bangladesh Perspective
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Research Card 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 research-card">
+              <div class="card-header bg-secondary text-white">
+                <h5 class="mb-0">IoT-based Efficient Egg Incubation System</h5>
+              </div>
+              <div class="card-body">
+                <div class="research-info">
+                  <p class="research-org">
+                    <strong>Organization:</strong> University Grants Commission
+                    of Bangladesh
+                  </p>
+                  <p class="research-role">
+                    <strong>Role:</strong> Associate Project Director
+                  </p>
+                  <p class="research-fund">
+                    <strong>Fund:</strong> BDT 3,00,000 (USD 2,500)
+                  </p>
+                  <p class="research-year"><strong>Year:</strong> 2021-2022</p>
+                </div>
+                <p class="research-desc">
+                  An IoT-based Efficient Egg Incubation System: Bangladesh
+                  Perspective
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Publications Section -->
     <section id="publications" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="card p-4 mb-4">
-                <div class="table-responsive">
-                    <table class="table table-hover publication-table">
-                        <thead class="table-dark">
-                            <tr>
-                                <th>#</th>
-                                <th>Year</th>
-                                <th>Title</th>
-                                <th>Authors</th>
-                                <th>Event</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>2024</td>
-                                <td>A CNN-based Model to Detect and Classify the Tomato Leaf Disease using Transfer
-                                    Learning</td>
-                                <td>Khawja Imran Masud, Md Maminur Rahman, Mst. Raonik Janna, Md Mehadi Hasan, Md.
-                                    Shariful Islam and Md. Obaidur Rahman</td>
-                                <td>2024 27th International Conference on Computer and Information Technology (ICCIT)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>2024</td>
-                                <td>Developing an IoT-based Motorcycle Safety and Monitoring System: An Efficient
-                                    Solution</td>
-                                <td>Pappuraj Bhottacharjee, Abu Saeid, Mst. Raonik Jannat and Khawja Imran Masud</td>
-                                <td>2024 27th International Conference on Computer and Information Technology (ICCIT)
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>2023</td>
-                                <td>Developing an IoT-based Child Safety and Monitoring System: An Efficient Approach
-                                </td>
-                                <td>Khawja Imran Masud, Mehedi Hasan Shuvo, Abdullah Al Mamun, Joytri Mallick, Mst.
-                                    Raonik Jannat and Md. Obaidur Rahman</td>
-                                <td>26th International Conference on Computer and Information Technology (ICCIT)</td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>2023</td>
-                                <td>Design and Development of an Efficient IoT-based Egg Incubation System</td>
-                                <td>Khawja Imran Masud, Pappuraj Bhottacharjee, Abu Saeid, Md. Golam Mostofa and Md.
-                                    Obaidur Rahman</td>
-                                <td>2023 International Conference on Next-Generation Computing, IoT and Machine Learning
-                                    (NCIM)</td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>2022</td>
-                                <td>A New Approach of Cryptography for Data Encryption and Decryption</td>
-                                <td>Khawja Imran Masud, Md Rakib Hasan, MD. Mozammel Hoque, Upel Dev Nath, Md. Obaidur
-                                    Rahman</td>
-                                <td>2022 5th International Conference on Computing and Informatics (ICCI)</td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>2019</td>
-                                <td>A Novel Approach of Fair Scheduling to Enhance Performance of Hadoop Distributed
-                                    File System</td>
-                                <td>Rubayet Hussain, Mostafijur Rahman, Khawja Imran Masud</td>
-                                <td>2019 International Conference on Electrical, Computer and Communication Engineering
-                                    (ECCE)</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
+      <div class="container">
+        <h2 class="section-title">Publications</h2>
+        <div class="card p-4 mb-4">
+          <div class="table-responsive">
+            <table class="table table-hover publication-table">
+              <thead class="table-dark">
+                <tr>
+                  <th>#</th>
+                  <th>Year</th>
+                  <th>Title</th>
+                  <th>Authors</th>
+                  <th>Event</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2024</td>
+                  <td>
+                    A CNN-based Model to Detect and Classify the Tomato Leaf
+                    Disease using Transfer Learning
+                  </td>
+                  <td>
+                    Khawja Imran Masud, Md Maminur Rahman, Mst. Raonik Janna, Md
+                    Mehadi Hasan, Md. Shariful Islam and Md. Obaidur Rahman
+                  </td>
+                  <td>
+                    2024 27th International Conference on Computer and
+                    Information Technology (ICCIT)
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>2024</td>
+                  <td>
+                    Developing an IoT-based Motorcycle Safety and Monitoring
+                    System: An Efficient Solution
+                  </td>
+                  <td>
+                    Pappuraj Bhottacharjee, Abu Saeid, Mst. Raonik Jannat and
+                    Khawja Imran Masud
+                  </td>
+                  <td>
+                    2024 27th International Conference on Computer and
+                    Information Technology (ICCIT)
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>2023</td>
+                  <td>
+                    Developing an IoT-based Child Safety and Monitoring System:
+                    An Efficient Approach
+                  </td>
+                  <td>
+                    Khawja Imran Masud, Mehedi Hasan Shuvo, Abdullah Al Mamun,
+                    Joytri Mallick, Mst. Raonik Jannat and Md. Obaidur Rahman
+                  </td>
+                  <td>
+                    26th International Conference on Computer and Information
+                    Technology (ICCIT)
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>2023</td>
+                  <td>
+                    Design and Development of an Efficient IoT-based Egg
+                    Incubation System
+                  </td>
+                  <td>
+                    Khawja Imran Masud, Pappuraj Bhottacharjee, Abu Saeid, Md.
+                    Golam Mostofa and Md. Obaidur Rahman
+                  </td>
+                  <td>
+                    2023 International Conference on Next-Generation Computing,
+                    IoT and Machine Learning (NCIM)
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>2022</td>
+                  <td>
+                    A New Approach of Cryptography for Data Encryption and
+                    Decryption
+                  </td>
+                  <td>
+                    Khawja Imran Masud, Md Rakib Hasan, MD. Mozammel Hoque, Upel
+                    Dev Nath, Md. Obaidur Rahman
+                  </td>
+                  <td>
+                    2022 5th International Conference on Computing and
+                    Informatics (ICCI)
+                  </td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>2019</td>
+                  <td>
+                    A Novel Approach of Fair Scheduling to Enhance Performance
+                    of Hadoop Distributed File System
+                  </td>
+                  <td>
+                    Rubayet Hussain, Mostafijur Rahman, Khawja Imran Masud
+                  </td>
+                  <td>
+                    2019 International Conference on Electrical, Computer and
+                    Communication Engineering (ECCE)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="memberships" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Fellowship / Membership of Scientific and Professional
-                Societies</h2>
-            <div class="table-responsive">
-                <table class="table table-striped table-hover align-middle">
-                    <thead class="table-light">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Organization</th>
-                            <th scope="col">Membership Code</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Member</td>
-                            <td>The Institution of Engineers, Bangladesh (IEB)</td>
-                            <td>Member Id: M-44322</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Member</td>
-                            <td>The Institute of Electrical and Electronics Engineers (IEEE)</td>
-                            <td>Member Id: 94090710</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Member</td>
-                            <td>DUET Teachers' Association</td>
-                            <td>Member (2018 ~ Till now)</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Member</td>
-                            <td>DUET Alumni Association</td>
-                            <td>Lifetime Member</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="container">
+        <h2 class="section-title">
+          Fellowship / Membership of Scientific and Professional Societies
+        </h2>
+        <div class="table-responsive">
+          <table class="table table-striped table-hover align-middle">
+            <thead class="table-light">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Type</th>
+                <th scope="col">Organization</th>
+                <th scope="col">Membership Code</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Member</td>
+                <td>The Institution of Engineers, Bangladesh (IEB)</td>
+                <td>Member Id: M-44322</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Member</td>
+                <td>
+                  The Institute of Electrical and Electronics Engineers (IEEE)
+                </td>
+                <td>Member Id: 94090710</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Member</td>
+                <td>DUET Teachers' Association</td>
+                <td>Member (2018 ~ Till now)</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Member</td>
+                <td>DUET Alumni Association</td>
+                <td>Lifetime Member</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </section>
 
     <section id="awards" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Honors and Awards</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm text-center border-0">
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Prime Minister Gold Medal Award-2018</h6>
-                            <p class="text-muted small mb-1">Prime Minister Office</p>
-                            <span class="badge bg-warning text-dark">2018</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm text-center border-0">
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">University Gold Medal Award-2018</h6>
-                            <p class="text-muted small mb-1">DUET Convocation 2018</p>
-                            <span class="badge bg-warning text-dark">2018</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm text-center border-0">
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">UGC Merit Award 2017</h6>
-                            <p class="text-muted small mb-1">UGC</p>
-                            <span class="badge bg-success">2017</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm text-center border-0">
-                        <div class="card-body">
-                            <h6 class="card-title fw-bold">Deans Award 2013, 2014, 2015, 2016</h6>
-                            <p class="text-muted small mb-1">Deans Award Ceremony</p>
-                            <span class="badge bg-info text-dark">2018</span>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Honors and Awards</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm text-center border-0">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">
+                  Prime Minister Gold Medal Award-2018
+                </h6>
+                <p class="text-muted small mb-1">Prime Minister Office</p>
+                <span class="badge bg-warning text-dark">2018</span>
+              </div>
             </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm text-center border-0">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">
+                  University Gold Medal Award-2018
+                </h6>
+                <p class="text-muted small mb-1">DUET Convocation 2018</p>
+                <span class="badge bg-warning text-dark">2018</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm text-center border-0">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">UGC Merit Award 2017</h6>
+                <p class="text-muted small mb-1">UGC</p>
+                <span class="badge bg-success">2017</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card h-100 shadow-sm text-center border-0">
+              <div class="card-body">
+                <h6 class="card-title fw-bold">
+                  Deans Award 2013, 2014, 2015, 2016
+                </h6>
+                <p class="text-muted small mb-1">Deans Award Ceremony</p>
+                <span class="badge bg-info text-dark">2018</span>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="students" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Guided Students</h2>
-            <div class="card shadow-sm border-light">
-                <div class="card-header bg-secondary text-white">
-                    <h5 class="mb-0">B.Sc. Students</h5>
-                </div>
-                <div class="card-body">
-                    <p><strong>Awarded Students:</strong> 6</p>
-                    <p><strong>Running Students:</strong> 30</p>
-                    <h6 class="mt-3">Student IDs:</h6>
-                    <div class="d-flex flex-wrap gap-2">
-                        <span class="badge bg-info text-dark fs-6 p-2">174075</span>
-                        <span class="badge bg-info text-dark fs-6 p-2">174110</span>
-                        <span class="badge bg-info text-dark fs-6 p-2">174111</span>
-                        <span class="badge bg-info text-dark fs-6 p-2">174112</span>
-                        <span class="badge bg-info text-dark fs-6 p-2">174113</span>
-                        <span class="badge bg-info text-dark fs-6 p-2">174116</span>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Guided Students</h2>
+        <div class="card shadow-sm border-light">
+          <div class="card-header bg-secondary text-white">
+            <h5 class="mb-0">B.Sc. Students</h5>
+          </div>
+          <div class="card-body">
+            <p><strong>Awarded Students:</strong> 6</p>
+            <p><strong>Running Students:</strong> 30</p>
+            <h6 class="mt-3">Student IDs:</h6>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="badge bg-info text-dark fs-6 p-2">174075</span>
+              <span class="badge bg-info text-dark fs-6 p-2">174110</span>
+              <span class="badge bg-info text-dark fs-6 p-2">174111</span>
+              <span class="badge bg-info text-dark fs-6 p-2">174112</span>
+              <span class="badge bg-info text-dark fs-6 p-2">174113</span>
+              <span class="badge bg-info text-dark fs-6 p-2">174116</span>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="events" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title">Conferences, Programming Contests & Events</h2>
-            <div class="accordion" id="eventsAccordion">
-                <!-- Event 1 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse1">
-                            DUET Inter University Programming Contest (IUPC) 2025 <small
-                                class="text-muted ms-2">(2025)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse1" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Department of CSE, DUET</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-success">Organizing
-                                    Secretary</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 2 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse2">
-                            DUET CSE 1st Reunion 2025 <small class="text-muted ms-2">(2025)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Department of CSE, DUET</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-primary">Organizing
-                                    Member</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 3 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse3">
-                            Intra DUET Programming Contest (IDPC) 2024 <small class="text-muted ms-2">(2024)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Department of CSE, DUET, Gazipur</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-success">Organizing
-                                    Secretary</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 4 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse4">
-                            International Conference on Next-Generation Computing, IoT and Machine Learning (NCIM 2023)
-                            <small class="text-muted ms-2">(2023)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Department of CSE, DUET, Gazipur</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-warning text-dark">Finance,
-                                    Venue, Media and Publicity</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 5 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse5">
-                            Intra DUET Programming Contest (IDPC) 2023 <small class="text-muted ms-2">(2023)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse5" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Department of CSE, DUET, Gazipur</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-success">Organizing
-                                    Secretary</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 6 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse6">
-                            International Collegiate Programming Contest (ICPC) 2023 <small
-                                class="text-muted ms-2">(2023)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> BUBT, Bangladesh</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-info">Coach</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 7 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse7">
-                            International Collegiate Programming Contest (ICPC) 2022 <small
-                                class="text-muted ms-2">(2023)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Green University, Bangladesh</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-info">Coach</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 8 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse8">
-                            International Collegiate Programming Contest (ICPC) 2021 <small
-                                class="text-muted ms-2">(2022)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse8" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> BUBT, Bangladesh</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-info">Coach</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 9 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse9">
-                            Intra DUET Programming Contest (IDPC) 2022 <small class="text-muted ms-2">(2022)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse9" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Department of CSE, DUET, Gazipur</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-success">Organizing
-                                    Secretary</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 10 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse10">
-                            6th National Girls Programming Contest-2022 <small class="text-muted ms-2">(2022)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse10" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Daffodil University</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-info">Coach</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 11 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse11">
-                            Smart Village and Smart City: Perspective Digital Bangladesh <small
-                                class="text-muted ms-2">(2021)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse11" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Faculty of EEE, DUET</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-warning text-dark">Focal
-                                    Point</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 12 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse12">
-                            ExCom Member, DUET Teachers' Association <small class="text-muted ms-2">(2020)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse12" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> DUETTA</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-primary">Cultural
-                                    Secretary</span></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event 13 -->
-                <div class="accordion-item">
-                    <h3 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse13">
-                            DUET CSE FEST 2019 <small class="text-muted ms-2">(2019)</small>
-                        </button>
-                    </h3>
-                    <div id="collapse13" class="accordion-collapse collapse" data-bs-parent="#eventsAccordion">
-                        <div class="accordion-body">
-                            <p class="mb-1"><strong>Organizer:</strong> Department of CSE, DUET</p>
-                            <p class="mb-0"><strong>Role:</strong> <span class="badge bg-warning text-dark">Sponsor
-                                    Coordinator</span></p>
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">
+          Conferences, Programming Contests & Events
+        </h2>
+        <div class="accordion" id="eventsAccordion">
+          <!-- Event 1 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse1"
+              >
+                DUET Inter University Programming Contest (IUPC) 2025
+                <small class="text-muted ms-2">(2025)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse1"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Department of CSE, DUET
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-success">Organizing Secretary</span>
+                </p>
+              </div>
             </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+              >
+                DUET CSE 1st Reunion 2025
+                <small class="text-muted ms-2">(2025)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Department of CSE, DUET
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-primary">Organizing Member</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 3 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+              >
+                Intra DUET Programming Contest (IDPC) 2024
+                <small class="text-muted ms-2">(2024)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Department of CSE, DUET, Gazipur
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-success">Organizing Secretary</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 4 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse4"
+              >
+                International Conference on Next-Generation Computing, IoT and
+                Machine Learning (NCIM 2023)
+                <small class="text-muted ms-2">(2023)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse4"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Department of CSE, DUET, Gazipur
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-warning text-dark"
+                    >Finance, Venue, Media and Publicity</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 5 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse5"
+              >
+                Intra DUET Programming Contest (IDPC) 2023
+                <small class="text-muted ms-2">(2023)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse5"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Department of CSE, DUET, Gazipur
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-success">Organizing Secretary</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 6 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse6"
+              >
+                International Collegiate Programming Contest (ICPC) 2023
+                <small class="text-muted ms-2">(2023)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse6"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1"><strong>Organizer:</strong> BUBT, Bangladesh</p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-info">Coach</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 7 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse7"
+              >
+                International Collegiate Programming Contest (ICPC) 2022
+                <small class="text-muted ms-2">(2023)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse7"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Green University, Bangladesh
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-info">Coach</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 8 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse8"
+              >
+                International Collegiate Programming Contest (ICPC) 2021
+                <small class="text-muted ms-2">(2022)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse8"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1"><strong>Organizer:</strong> BUBT, Bangladesh</p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-info">Coach</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 9 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse9"
+              >
+                Intra DUET Programming Contest (IDPC) 2022
+                <small class="text-muted ms-2">(2022)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse9"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Department of CSE, DUET, Gazipur
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-success">Organizing Secretary</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 10 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse10"
+              >
+                6th National Girls Programming Contest-2022
+                <small class="text-muted ms-2">(2022)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse10"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Daffodil University
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-info">Coach</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 11 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse11"
+              >
+                Smart Village and Smart City: Perspective Digital Bangladesh
+                <small class="text-muted ms-2">(2021)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse11"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Faculty of EEE, DUET
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-warning text-dark">Focal Point</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 12 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse12"
+              >
+                ExCom Member, DUET Teachers' Association
+                <small class="text-muted ms-2">(2020)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse12"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1"><strong>Organizer:</strong> DUETTA</p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-primary">Cultural Secretary</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 13 -->
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse13"
+              >
+                DUET CSE FEST 2019 <small class="text-muted ms-2">(2019)</small>
+              </button>
+            </h3>
+            <div
+              id="collapse13"
+              class="accordion-collapse collapse"
+              data-bs-parent="#eventsAccordion"
+            >
+              <div class="accordion-body">
+                <p class="mb-1">
+                  <strong>Organizer:</strong> Department of CSE, DUET
+                </p>
+                <p class="mb-0">
+                  <strong>Role:</strong>
+                  <span class="badge bg-warning text-dark"
+                    >Sponsor Coordinator</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="courses" class="py-5">
-        <div class="container">
-            <h2 class="section-title">Courses Conducted</h2>
-            <div class="table-responsive">
-                <table class="table table-bordered table-hover align-middle">
-                    <thead class="table-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Programme</th>
-                            <th scope="col">Course No</th>
-                            <th scope="col">Course Title</th>
-                            <th scope="col">Year</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><span class="badge bg-secondary">M.Sc.</span></td>
-                            <td><code>CSE-6410</code></td>
-                            <td>Cyber Physical System</td>
-                            <td>2024 - 2025</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-2513</code></td>
-                            <td>Discrete Mathematics</td>
-                            <td>2019 - 2024</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-3621</code></td>
-                            <td>Information System Analysis & Design</td>
-                            <td>2022 - 2025</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-2113</code></td>
-                            <td>Computer Programming</td>
-                            <td>2022 - 2025</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-4623</code></td>
-                            <td>Artificial Intelligence</td>
-                            <td>2020 - 2021</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-4701</code></td>
-                            <td>Introduction to Microprocessor, Robotics and Control Engineering</td>
-                            <td>2019 - 2021</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-3422</code></td>
-                            <td>Data Communication Sessional</td>
-                            <td>2019 - 2024</td>
-                        </tr>
-                        <tr>
-                            <td>8</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-1124</code></td>
-                            <td>Drawing & CAD Project Sessional</td>
-                            <td>2019 - 2024</td>
-                        </tr>
-                        <tr>
-                            <td>9</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-2410</code></td>
-                            <td>Computer Programming Sessional</td>
-                            <td>2019 - 2022</td>
-                        </tr>
-                        <tr>
-                            <td>10</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-4412</code></td>
-                            <td>Computer Networks Sessional</td>
-                            <td>2019 - 2025</td>
-                        </tr>
-                        <tr>
-                            <td>11</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-3812</code></td>
-                            <td>Microprocessor and Assembly Language Sessional</td>
-                            <td>2019 - 2020</td>
-                        </tr>
-                        <tr>
-                            <td>12</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-4624</code></td>
-                            <td>Artificial Intelligence Sessional</td>
-                            <td>2020 - 2021</td>
-                        </tr>
-                        <tr>
-                            <td>13</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-2120</code></td>
-                            <td>Visual Programming Sessional</td>
-                            <td>2020 - 2021</td>
-                        </tr>
-                        <tr>
-                            <td>14</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-3622</code></td>
-                            <td>Information System Analysis & Design Sessional</td>
-                            <td>2022 - 2025</td>
-                        </tr>
-                        <tr>
-                            <td>15</td>
-                            <td><span class="badge bg-secondary">B.Sc.</span></td>
-                            <td><code>CSE-2114</code></td>
-                            <td>Computer Programming Sessional</td>
-                            <td>2022 - 2025</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+      <div class="container">
+        <h2 class="section-title">Courses Conducted</h2>
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Programme</th>
+                <th scope="col">Course No</th>
+                <th scope="col">Course Title</th>
+                <th scope="col">Year</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><span class="badge bg-secondary">M.Sc.</span></td>
+                <td><code>CSE-6410</code></td>
+                <td>Cyber Physical System</td>
+                <td>2024 - 2025</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-2513</code></td>
+                <td>Discrete Mathematics</td>
+                <td>2019 - 2024</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-3621</code></td>
+                <td>Information System Analysis & Design</td>
+                <td>2022 - 2025</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-2113</code></td>
+                <td>Computer Programming</td>
+                <td>2022 - 2025</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-4623</code></td>
+                <td>Artificial Intelligence</td>
+                <td>2020 - 2021</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-4701</code></td>
+                <td>
+                  Introduction to Microprocessor, Robotics and Control
+                  Engineering
+                </td>
+                <td>2019 - 2021</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-3422</code></td>
+                <td>Data Communication Sessional</td>
+                <td>2019 - 2024</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-1124</code></td>
+                <td>Drawing & CAD Project Sessional</td>
+                <td>2019 - 2024</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-2410</code></td>
+                <td>Computer Programming Sessional</td>
+                <td>2019 - 2022</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-4412</code></td>
+                <td>Computer Networks Sessional</td>
+                <td>2019 - 2025</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-3812</code></td>
+                <td>Microprocessor and Assembly Language Sessional</td>
+                <td>2019 - 2020</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-4624</code></td>
+                <td>Artificial Intelligence Sessional</td>
+                <td>2020 - 2021</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-2120</code></td>
+                <td>Visual Programming Sessional</td>
+                <td>2020 - 2021</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-3622</code></td>
+                <td>Information System Analysis & Design Sessional</td>
+                <td>2022 - 2025</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td><span class="badge bg-secondary">B.Sc.</span></td>
+                <td><code>CSE-2114</code></td>
+                <td>Computer Programming Sessional</td>
+                <td>2022 - 2025</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+      </div>
     </section>
 
-    <div class="position-fixed m-4 z-3 sub-menu-r" style="width: 60px;">
-        <ul class="nav flex-column bg-white rounded shadow-sm overflow-hidden border">
-            <li class="nav-item">
-                <a class="nav-link py-2 text-center" href="#memberships" title="Memberships"><i
-                        class="bi bi-people"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link py-2 text-center" href="#awards" title="Awards"><i class="bi bi-trophy"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link py-2 text-center" href="#students" title="Students"><i
-                        class="bi bi-mortarboard"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link py-2 text-center" href="#events" title="Events"><i
-                        class="bi bi-calendar-event"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link py-2 text-center" href="#courses" title="Courses"><i class="bi bi-book"></i></a>
-            </li>
-        </ul>
+    <div class="position-fixed m-4 z-3 sub-menu-r" style="width: 60px">
+      <ul
+        class="nav flex-column bg-white rounded shadow-sm overflow-hidden border"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link py-2 text-center"
+            href="#memberships"
+            title="Memberships"
+            ><i class="bi bi-people"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 text-center" href="#awards" title="Awards"
+            ><i class="bi bi-trophy"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 text-center" href="#students" title="Students"
+            ><i class="bi bi-mortarboard"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 text-center" href="#events" title="Events"
+            ><i class="bi bi-calendar-event"></i
+          ></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link py-2 text-center" href="#courses" title="Courses"
+            ><i class="bi bi-book"></i
+          ></a>
+        </li>
+      </ul>
     </div>
-
-
 
     <!-- Contact Section -->
     <section id="contact" class="py-5">
-        <div class="container">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div class="card p-4 h-100">
+              <h4>Contact Information</h4>
+              <p>
+                <strong>Email:</strong> KhawjaImranMasud@my.unt.edu <br />
+                kimasud.cse@duet.ac.bd
+              </p>
+              <p><strong>Phone:</strong> +1(940) 977-9356</p>
+              <p><strong>Office:</strong> Discovery Park, UNT</p>
+              <p>
+                <strong>Address:</strong> 2505 Louise Street, Denton, Texas,
+                USA.
+              </p>
 
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card p-4 h-100">
-                        <h4>Contact Information</h4>
-                        <p><strong>Email:</strong> KhawjaImranMasud@my.unt.edu <br> kimasud.cse@duet.ac.bd</p>
-                        <p><strong>Phone:</strong> +1(940) 977-9356</p>
-                        <p><strong>Office:</strong> Discovery Park, UNT</p>
-                        <p><strong>Address:</strong> 2505 Louise Street, Denton, Texas, USA.</p>
-
-                        <h5 class="mt-4">Connect With Me</h5>
-                        <div class="d-flex mt-3">
-                            <a href="https://www.linkedin.com/in/eimrancse" class="social-icon"><i
-                                    class="bi bi-linkedin"></i></a>
-                            <a href="https://scholar.google.com/citations?user=f7_k7GEAAAAJ&hl=en"
-                                class="social-icon"><i class="bi bi-google"></i></a>
-                        </div>
-                    </div>
-                </div>
+              <h5 class="mt-4">Connect With Me</h5>
+              <div class="d-flex mt-3">
+                <a
+                  href="https://www.linkedin.com/in/eimrancse"
+                  class="social-icon"
+                  ><i class="bi bi-linkedin"></i
+                ></a>
+                <a
+                  href="https://scholar.google.com/citations?user=f7_k7GEAAAAJ&hl=en"
+                  class="social-icon"
+                  ><i class="bi bi-google"></i
+                ></a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="text-center">
-        <div class="container">
-            <p>&copy; 2025 Khawja Imran Masud. All Rights Reserved.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2025 Khawja Imran Masud. All Rights Reserved.</p>
+      </div>
     </footer>
 
     <!-- Back to Top Button -->
@@ -1075,22 +1391,21 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        // Back to top button
-        const backToTopButton = document.querySelector('.back-to-top');
+      // Back to top button
+      const backToTopButton = document.querySelector(".back-to-top");
 
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+          backToTopButton.style.display = "block";
+        } else {
+          backToTopButton.style.display = "none";
+        }
+      });
 
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
+      backToTopButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
     </script>
-</body>
-
+  </body>
 </html>
